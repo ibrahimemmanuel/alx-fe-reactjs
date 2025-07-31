@@ -1,14 +1,11 @@
 import React from 'react';
 
 function MainContent() {
-  const contentStyle = {
-    padding: '20px',
-    textAlign: 'center',
-  };
-
   return (
-    <main style={contentStyle}>
-      <p>This is the main content area of the app.</p>
+    <main style={{ padding: '1rem', backgroundColor: '#0035bcff' }}>
+      <p style={{ fontSize: '1.2rem' }}>
+        Welcome to the list of some of my favorite cities around the world!
+      </p>
     </main>
   );
 }

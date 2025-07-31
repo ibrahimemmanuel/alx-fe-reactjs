@@ -1,29 +1,11 @@
 import React from 'react';
 
-function UserProfile() {
-  const profileStyle = {
-    padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '10px',
-    width: '300px',
-    margin: '20px auto',
-    textAlign: 'center',
-  };
-
-  const imageStyle = {
-    width: '100px',
-    borderRadius: '50%',
-  };
-
+function UserProfile(props) {
   return (
-    <div style={profileStyle}>
-      <img
-        src="https://via.placeholder.com/100"
-        alt="User Avatar"
-        style={imageStyle}
-      />
-      <h2>Jane Doe</h2>
-      <p>Frontend Developer</p>
+    <div style={{ border: '1px solid gray', padding: '10px', margin: '10px' }}>
+      <h2 style={{ color: 'blue' }}>{props.name}</h2>
+      <p>Age: <span style={{ fontWeight: 'bold' }}>{props.age}</span></p>
+      <p>Bio: {props.bio}</p>
     </div>
   );
 }
