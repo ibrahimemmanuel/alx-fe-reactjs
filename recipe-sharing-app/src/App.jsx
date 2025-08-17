@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
-import RecipeDetails from './components/RecipeDetails';
+import RecipeList from './components/RecipeList';
 import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
+import { useRecipeStore } from './components/recipeStore';
 
 function App() {
   return (
@@ -15,6 +16,11 @@ function App() {
               <AddRecipeForm />
               <SearchBar />
               <RecipeList />
+               <button onClick={generateRecommendations} style={{ margin: '10px 0', padding: '5px 10px' }}></button>
+               Generate Recommendations
+              </button>
+              <FavoritesList />
+              <RecommendationsList />
             </>
           } />
           <Route path="/recipe/:id" element={<RecipeDetailsWrapper />} />
