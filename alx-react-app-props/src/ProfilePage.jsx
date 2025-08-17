@@ -1,13 +1,7 @@
-// src/ProfilePage.jsx
-import React from "react";
 import UserInfo from "./UserInfo";
 
 function ProfilePage() {
-  return (
-    <div>
-      <UserInfo />
-    </div>
-  );
+  return <UserInfo />;
 }
 
 export default ProfilePage;
